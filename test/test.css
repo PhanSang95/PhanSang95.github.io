@@ -1,0 +1,394 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Begin Header */
+#header {
+    background-color: #000 !important;
+    height: 46.5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav > li:hover > a {
+    color: #000 !important;
+    background-color: #ccc !important;
+}
+
+.nav > li > a {
+    height: 46.5px;
+    line-height: 46.5px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 24px;
+} 
+
+.sub-nav {
+    list-style-type: none;
+    position: absolute;
+    top: 46.5px;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 0 2px;
+}
+
+.nav > li:hover .sub-nav {
+    display: block; 
+}
+
+.sub-nav li:hover a {
+    background-color: #ccc !important;
+}
+
+.sub-nav li a {
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    padding: 10px 16px;
+}
+
+.header-icon {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 23px;
+}
+
+
+
+/* Begin Slider */
+#slider {
+    background: url('/assets/img/slider/slider1.jpg') top center /cover no-repeat ;
+    margin-top: 46.5px;
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+}
+
+.slider-body {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.slider-text {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.slider-dsc {
+    font-size: 15px;
+    margin-bottom: 48px;
+}
+
+
+
+/* Begin Content */
+
+.content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.tour-section {
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+}
+
+.content-heading {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+.content-sub-heading {
+    margin-bottom: 25px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.content-text { 
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Member */
+.member-list {
+
+} 
+
+.member-item {
+    float: left;
+    width: calc(100% /3);
+    margin: 32px 0;
+} 
+
+.member-name {
+    font-size: 15px;
+    margin: 15px 0;
+} 
+
+.member-img {
+    width: 154px;
+    margin-bottom: 16px;
+} 
+
+/* Tour-dates */
+
+.tour-time {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 32px;
+}
+.tour-time li {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    position: relative;
+}
+
+.tour-time-month {
+    display: inline-block;
+    opacity: 0.7;
+    padding: 0 16px;
+}
+
+.sold-out {
+    display: inline-block;
+    background-color: #f44336!important;
+    padding: 2px 6px;
+    color: #000;
+}
+
+.tour-quantity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 32px;
+    padding: 2px 8px;
+    margin-top: 8px;
+}
+
+/* Place-tour */
+
+.place-list {
+    margin: 0 -8px;
+
+}
+
+.place-item {
+    float: left;
+    width: calc(100% /3);
+    background-color: #fff;
+    width: 245px;
+    margin: 0 8px;
+} 
+
+.place-img {
+    width: 100%;
+} 
+
+.place-body {
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+    padding: 16px;
+} 
+
+.place-body-time {
+    margin: 15px 0;
+    opacity: 0.6;
+} 
+
+.place-body-text {
+    margin-bottom: 15px;
+} 
+
+.buy-ticket {
+    font-size: 15px;
+    background-color: #000;
+    color: #fff;
+    padding: 9px 14px;
+    border: none;
+}
+
+.buy-ticket:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    cursor: pointer;
+}
+
+/* Begin Footer */
+#footer {
+
+}
+
+/*  Modal */
+.modal {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-body {
+    width: 900px;
+    animation: modal-animation ease 0.5s;
+    max-width: calc(100% - 32px);
+}
+
+.modal-header {
+    background-color: #009688!important;
+    height: 129px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    position: relative;
+    color: #fff;
+}
+
+.modal-header-text {
+    letter-spacing: 4px;
+    margin-left: 16px;
+}
+
+.modal-header-close {
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 12px !important;
+    display: block;
+    color: #fff;
+    padding: 20px 17px;
+}
+
+.modal-header-close:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    cursor: pointer;
+}
+
+.modal-content
+{
+    padding: 0 16px;
+    background-color: #fff;
+} 
+
+.modal-label-text {
+    font-size: 15px;
+    padding: 3px 0;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 11px 8px;
+    border: 1px solid #ccc;
+}
+
+.modal-pay {
+    font-size: 15px;
+    padding: 18px 0;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009688!important;
+    color: #fff;
+}
+
+.modal-pay:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    cursor: pointer;
+}
+
+.modal-footer {
+    margin-top: 16px;
+    position: relative;
+}
+
+.modal-footer-close {
+    display: inline-block;
+    font-size: 15px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 11px 13px;
+    margin: 16px 0;
+} 
+
+.modal-footer-close:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    cursor: pointer;
+}
+
+.modal-footer-help {
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 31px;
+    position: absolute;
+    right: 16px;
+} 
+
+@keyframes modal-animation {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+
+    }
+}
